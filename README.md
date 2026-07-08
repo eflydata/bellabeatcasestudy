@@ -14,7 +14,7 @@ I have cleaned the column names to eliminate the word "merged" from their title,
   * **daily_calories**
   * **hourly_calories**
   * **minute_calories**
-* **daily_intensities**: Activity is broken down into columns referring to the level of intensity here, including minutes spent sedentary, lightly active, fairly active, and very active, and the distance traveled each day while at each intensity level
+* **daily_intensities**: Activity is broken down into columns referring to the level of intensity here, including minutes spent sedentary, lightly active, fairly active, and very active, and the distance traveled each day while at each intensity level,
 * **hourly_intensity**: Total and average intensity per hour
 * **Step counts, represented in 3 tables**: Columns include the day/hour/minute time stamp, number of steps, and user ID
 * **minute_METs**: Metabolic Equivalent of Task per minute, with 1 being your resting metabolic rate. This number scale is a metric for intensity, which is represented by a name in other tables. According to Bailey, Dodd et. al:
@@ -22,7 +22,13 @@ I have cleaned the column names to eliminate the word "merged" from their title,
     * Lightly Active: 1.5 to 3.0 METs (e.g., casual walking, doing dishes, or light housework)
     * Fairly Active: 3.0 to 6.0 METs (e.g., brisk walking, jogging, or mowing the lawn)
     * Very Active: Greater than 6.0 METs (e.g., running, jumping rope, or HIIT)
+* **sleep_day**: gives total time in bed and total time asleep for comparison. I added a column with this ratio to show the difference each day comparing the time spent in bed vs. time spent asleep, and called it SleepEfficiency.
+* **Duplicate Information**: daily_activities lists a lot of columns that are shared with the other daily calories, synthesized into one table. I was chose to lean on the table relevant to the metric for ease of understanding. When calculating steps, I used the daily_steps table/
 
+## Insights
+After analyzing the data, I observed the following trends:
+* Users are most active in the evening on weekdays between 4pm and 6pm, with the most active hour at 4pm, and on Saturdays between 8am and 1pm, with 1pm being the highest active minutes all week. 
+* Users are most likely to be lightly active or sedentary. 
 ## Citations
 
 Bailey CP, Dodd KW, McClain JJ, Seo I, Wheeler W, Wolff-Hughes DL. Fitbit Physical Activity and Sleep Data in the All of Us Research Program: Data Exploration and Processing Considerations for Research. Med Sci Sports Exerc. 2025 Dec 1;57(12):2946-2953. doi: 10.1249/MSS.0000000000003804. Epub 2025 Jul 3. PMID: 40605186; PMCID: PMC12264798.
